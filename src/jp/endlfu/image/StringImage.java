@@ -8,5 +8,8 @@ package jp.endlfu.image;
  */
 public interface StringImage
 {
-    int[] getIntegerArray();
+    /**
+     * @return pixel
+     */
+    int[] getPixel();
 }
