@@ -12,4 +12,9 @@ public interface StringImage
      * @return pixel
      */
     int[] getPixel();
+    
+    /**
+     * @return string
+     */
+    String getString();
 }

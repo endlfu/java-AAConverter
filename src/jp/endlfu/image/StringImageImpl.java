@@ -20,6 +20,12 @@ public class StringImageImpl implements StringImage
         return pixel;
     }
 
+    @Override
+    public String getString()
+    {
+        return string;
+    }
+    
     private int[] convert(String s) throws InterruptedException
     {
         BufferedImage image=new BufferedImage(w,h,BufferedImage.TYPE_INT_RGB);
@@ -41,9 +47,11 @@ public class StringImageImpl implements StringImage
     public StringImageImpl(String s) throws InterruptedException
     {
         this.pixel = convert(s);
+        this.string = s;
     }
     
     private final int w = 60;
     private final int h = 20;
     private final int[] pixel;
+    private final String string;
 }
